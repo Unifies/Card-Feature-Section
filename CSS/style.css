@@ -7,7 +7,7 @@
   --Very-Dark-Blue: hsl(234, 12%, 34%);
   --Grayish-Blue: hsl(229, 6%, 66%);
   --Very-Light-Gray: hsl(0, 0%, 98%);
-  --White: hsl(0°, 0%, 100%);
+  --White: hsl(0, 0%, 100%);
 
   /*Fonts*/
   --FontFam: "Poppins", sans-serif;
@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--Very-Light-Gray);
+  margin: 7vw;
 }
 
 section {
@@ -94,31 +95,42 @@ section {
 
 .flexchild {
   background-color: var(--White);
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   text-align: left;
   padding: var(--fs-17);
+  position: relative;
+  overflow: hidden;
+}
+
+.flexchild::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+
+.cyan::before {
+  background-color: var(--Cyan);
+}
+
+.red::before {
+  background-color: var(--Red);
+}
+
+.orange::before {
+  background-color: var(--Orange);
+}
+
+.blue::before {
+  background-color: var(--Blue);
 }
 
 .flexchild img {
   float: right;
   margin-top: var(--fs-17);
-}
-
-.cyan {
-  border-top: 5px solid var(--Cyan);
-}
-
-.red {
-  border-top: 5px solid var(--Red);
-}
-
-.orange {
-  border-top: 5px solid var(--Orange);
-}
-
-.blue {
-  border-top: 5px solid var(--Blue);
 }
 
 @media (min-width: 600px) {
